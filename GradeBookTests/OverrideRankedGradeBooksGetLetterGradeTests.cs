@@ -259,7 +259,7 @@ namespace GradeBookTests
             gradeBook.GetType().GetProperty("Students").SetValue(gradeBook, students);
 
             //Test if C is given when input grade is between the top 40 and 60%.
-            Assert.True((char)method.Invoke(gradeBook, new object[] { 50 }) == 'C', "`GradeBook.GradeBooks.RankedGradeBook.GetLetterGrade` didn't give an C to students between the top 40 and 60% of the class.");
+            Assert.True((char)method.Invoke(gradeBook, new object[] { 50 }) == 'C', $"`GradeBook.GradeBooks.RankedGradeBook.GetLetterGrade` didn't give an C {(char)method.Invoke(gradeBook, new object[] { 50 }) } to students between the top 40 and 60% of the class.");
         }
 
         /// <summary>
@@ -310,7 +310,7 @@ namespace GradeBookTests
             gradeBook.GetType().GetProperty("Students").SetValue(gradeBook, students);
 
             //Test if D is given when input grade is between the top 60 and 80%.
-            Assert.True((char)method.Invoke(gradeBook, new object[] { 25 }) == 'D', "`GradeBook.GradeBooks.RankedGradeBook.GetLetterGrade` didn't give an D to students between the top 60 and 80% of the class.");
+            Assert.True((char)method.Invoke(gradeBook, new object[] { 25 }) == 'D', $"`GradeBook.GradeBooks.RankedGradeBook.GetLetterGrade` didn't give an D {(char)method.Invoke(gradeBook, new object[] { 25 })} to students between the top 60 and 80% of the class.");
         }
     }
 }
