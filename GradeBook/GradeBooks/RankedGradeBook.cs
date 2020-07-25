@@ -13,6 +13,12 @@ namespace GradeBook.GradeBooks
             Type = GradeBookType.Ranked;
         }
 
+        public RankedGradeBook(string name, bool isWeighted) : base(name)
+        {
+            Type = GradeBookType.Ranked;
+            IsWeighted = isWeighted;
+        }
+
         public override char GetLetterGrade(double averageGrade)
         {
             if(Students.Count <5)
