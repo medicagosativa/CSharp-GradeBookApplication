@@ -29,13 +29,13 @@ namespace GradeBook.GradeBooks
 
             switch(averageGrade)
             {
-                case var _ when SortedList[Convert.ToInt32(Students.Count * 0.2)].AverageGrade < averageGrade:
+                case var _ when SortedList[Convert.ToInt32(Math.Round(Students.Count * 0.2))].AverageGrade < averageGrade:
                     return 'A';
-                case var _ when SortedList[Convert.ToInt32(Students.Count * 0.2) * 2].AverageGrade < averageGrade:
+                case var _ when SortedList[Convert.ToInt32(Math.Round(Students.Count * 0.4))].AverageGrade < averageGrade:
                     return 'B';
-                case var _ when SortedList[Convert.ToInt32(Students.Count * 0.2) * 3].AverageGrade < averageGrade:
+                case var _ when SortedList[Convert.ToInt32(Math.Round(Students.Count * 0.6))].AverageGrade < averageGrade:
                     return 'C';
-                case var _ when SortedList[Convert.ToInt32(Students.Count * 0.2) * 4].AverageGrade < averageGrade:
+                case var _ when SortedList[Convert.ToInt32(Math.Round(Students.Count * 0.8))].AverageGrade < averageGrade:
                     return 'D'; 
                 default:
                     return 'F';
